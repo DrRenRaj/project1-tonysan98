@@ -2,17 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
+        android:icon="@drawable/home_icon"
         android:title="Home" />
 
     <item
         android:id="@+id/addProjectFragment"
+        android:icon="@drawable/add_project"
         android:title="Add a Project" />
 
     <item
         android:id="@+id/viewProjectsFragment"
+        android:icon="@drawable/view_project"
         android:title="View Projects" />
 
     <item
         android:id="@+id/analyticsFragment"
+        android:icon="@drawable/analytics"
         android:title="Analytics" />
 </menu>

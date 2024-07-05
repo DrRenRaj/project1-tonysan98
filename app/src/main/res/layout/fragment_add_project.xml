@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddProjectFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/addProjectHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            android:text="Add a new job"/>
+
+        <EditText
+            android:id="@+id/projectName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Client/Insurance Name"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/projectContactPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Phone Number"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/projectContactEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Email"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/projectCarMake"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Car Make"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/projectCarModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Car Model"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/projectCarYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Year"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/projectCarDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description/Scope of Job"
+            android:inputType="textMultiLine"/>
+
+        <EditText
+            android:id="@+id/projectDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date arrived to shop"
+            android:focusable="false"
+            android:clickable="true"
+            android:inputType="none"/>
+
+        <EditText
+            android:id="@+id/projectCarCost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Total Cost"
+            android:inputType="textMultiLine"/>
+
+        <Button
+            android:id="@+id/submitProjectButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+</ScrollView>
