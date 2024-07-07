@@ -18,7 +18,7 @@
             android:layout_height="match_parent"
             android:textSize="22sp"
             android:textAlignment="center"
-            android:text="Add a new job"/>
+            android:text="Add a New Job"/>
 
         <EditText
             android:id="@+id/projectName"

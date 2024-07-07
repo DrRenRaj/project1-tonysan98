@@ -33,7 +33,7 @@ class AddProjectFragment : Fragment() {
         // this will save the information to the in memory database
         binding.submitProjectButton.setOnClickListener {
             val project = Project(
-                name = binding.projectNameInput.text.toString(),
+                name = binding.projectName.text.toString(),
                 contactPhoneNumber = binding.projectContactPhoneNumber.text.toString(),
                 contactEmail = binding.projectContactEmail.text.toString(),
                 carMake = binding.projectCarMake.text.toString(),
