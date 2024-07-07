@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import edu.msudenver.cs3013.project1_s24.databinding.FragmentAddProjectBinding
 import java.util.Calendar
@@ -44,7 +45,19 @@ class AddProjectFragment : Fragment() {
                 totalCost = binding.projectCarCost.text.toString()
             )
             ProjectDatabase.addProject(project)
-            // Optionally navigate back or show a message
+            // Clear the form
+            binding.projectName.text.clear()
+            binding.projectContactPhoneNumber.text.clear()
+            binding.projectContactEmail.text.clear()
+            binding.projectCarMake.text.clear()
+            binding.projectCarModel.text.clear()
+            binding.projectCarYear.text.clear()
+            binding.projectCarDescription.text.clear()
+            binding.projectDateInput.text.clear()
+            binding.projectCarCost.text.clear()
+
+            // Show a success message
+            Toast.makeText(requireContext(), "Project added successfully", Toast.LENGTH_SHORT).show()
         }
 
     }

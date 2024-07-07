@@ -21,4 +21,12 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- activity_main.xml or the layout file for the activity hosting the fragments -->
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- This container will be used to display fragments -->
+    </FrameLayout>
+
 </FrameLayout>

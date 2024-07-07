@@ -1,5 +1,7 @@
 package edu.msudenver.cs3013.project1_s24
 
+import java.io.Serializable
+
 data class Project(
     val name: String,
     val contactPhoneNumber: String,
@@ -10,7 +12,7 @@ data class Project(
     val description: String,
     val dateArrived: String,
     val totalCost: String
-)
+) : Serializable
 
 object ProjectDatabase {
     val projects = mutableListOf<Project>()

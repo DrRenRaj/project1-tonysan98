@@ -6,17 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ProjectAdapter(private val projects: List<Project>) : RecyclerView.Adapter<ProjectAdapter.ProjectViewHolder>() {
+interface ProjectClickListener {
+    fun onProjectClicked(project: Project)
+}
 
-    class ProjectViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val name = view.findViewById<TextView>(R.id.projectName)
-        // Define other views
-
-        fun bind(project: Project) {
-            name.text = project.name
-            // Bind other project details
-        }
-    }
+class ProjectAdapter(var projects: MutableList<Project>, private val clickListener: ProjectClickListener) : RecyclerView.Adapter<ProjectAdapter.ProjectViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProjectViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.project_item, parent, false)
@@ -24,8 +18,27 @@ class ProjectAdapter(private val projects: List<Project>) : RecyclerView.Adapter
     }
 
     override fun onBindViewHolder(holder: ProjectViewHolder, position: Int) {
-        holder.bind(projects[position])
+        val project = projects[position]
+        holder.projectName.text = project.name
+        holder.projectDescription.text = project.description
+        // Set other project details to the views here
+
+        holder.itemView.setOnClickListener {
+            clickListener.onProjectClicked(project)
+        }
     }
 
-    override fun getItemCount() = projects.size
+    override fun getItemCount(): Int = projects.size
+
+    fun updateProjects(newProjects: List<Project>) {
+        projects.clear()
+        projects.addAll(newProjects)
+        notifyDataSetChanged()
+    }
+
+    class ProjectViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val projectName: TextView = itemView.findViewById(R.id.projectName)
+        val projectDescription: TextView = itemView.findViewById(R.id.projectCarDescription)
+        // Initialize other views here
+    }
 }
