@@ -8,14 +8,17 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_message" />
+        android:layout_height="106dp"
+        android:layout_gravity="top"
+        android:text="@string/home_message"
+        android:textAlignment="center"
+        android:textSize="20dp"/>
 
     <ImageView
         android:id="@+id/homeImageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/body_shop"
-        android:layout_gravity="center" />
+        android:layout_height="757dp"
+        android:layout_gravity="bottom"
+        android:src="@drawable/body_shop" />
 
 </FrameLayout>

@@ -8,7 +8,17 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="367dp"
+        android:layout_gravity="center"
+        android:text="Welcome to the analytics page! Below is how much you have earned per month!"
+        android:textAlignment="center" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"/>
+
 
 </FrameLayout>

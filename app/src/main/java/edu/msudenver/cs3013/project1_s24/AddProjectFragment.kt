@@ -57,7 +57,7 @@ class AddProjectFragment : Fragment() {
             binding.projectCarCost.text.clear()
 
             // Show a success message
-            Toast.makeText(requireContext(), "Project added successfully", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Job added successfully", Toast.LENGTH_SHORT).show()
         }
 
     }
